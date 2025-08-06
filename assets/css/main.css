@@ -726,7 +726,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 80%, color-mix(in srgb, var(--accent-color), transparent 90%) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 80%, color-mix(in srgb, var(--contrast-color), transparent 90%) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -1000,7 +1000,7 @@ section,
 .about .section-badge {
   display: inline-block;
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+  color: var(--contrast-color);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-size: 0.875rem;
@@ -1053,7 +1053,7 @@ section,
 .about .stat-item .stat-number {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--contrast-color);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -1082,7 +1082,7 @@ section,
   position: absolute;
   bottom: -20px;
   left: -20px;
-  background-color: var(--accent-color);
+  background-color: var(--contrast-color);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
@@ -1105,20 +1105,20 @@ section,
 .about .main-image-container .overlay-card .card-content h4 {
   margin-bottom: 0.5rem;
   font-size: 1.125rem;
-  color: var(--);
+  color: var(--accent-color);
 }
 
 .about .main-image-container .overlay-card .card-content p {
   margin: 0;
   font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--background-color), transparent 30%);
   line-height: 1.5;
 }
 
 .about .main-image-container .overlay-card .card-content .card-icon {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -16px;
+  right: -16px;
   background-color: var(--accent-color);
   color: var(--contrast-color);
   width: 40px;
@@ -1998,4 +1998,9 @@ section,
 
 .contact .contact-form .btn-submit:active {
   transform: translateY(0);
+}
+
+.devicon-tiktok-plain {
+  font-size: 48px; 
+  color: #ffffff; 
 }
