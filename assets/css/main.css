@@ -840,6 +840,12 @@ section,
   .hero .hero-content .hero-stats {
     flex-direction: column;
     gap: 24px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero .hero-content .hero-stats .stat-item {
+    text-align: center;
   }
 }
 
@@ -1536,7 +1542,13 @@ section,
 .features .visual-content .main-image img {
   width: 100%;
   height: auto;
+  object-fit: contain;
   transition: transform 0.6s ease;
+}
+
+/* Spezielle Regel für Netze-Bilder - sollen beschnitten bleiben */
+#features-tab-5 .visual-content .main-image img {
+  object-fit: cover;
 }
 
 .features .visual-content .main-image:hover img {
@@ -2075,4 +2087,21 @@ section,
 .devicon-tiktok-plain {
   font-size: 48px; 
   color: #ffffff; 
+}
+
+/* Mobile Layout für Produktsektionen */
+@media (max-width: 992px) {
+  .features .tab-pane .row {
+    flex-direction: column-reverse;
+  }
+  
+  .features .tab-pane .col-lg-5,
+  .features .tab-pane .col-lg-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .features .tab-pane .col-lg-7 {
+    margin-bottom: 30px;
+  }
 }

@@ -180,6 +180,180 @@
         padding: 16px 35px;
       }
     }
+
+    /* Social Media Showcase Styling */
+    .social-media-showcase h3 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .social-platform-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px 25px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-platform-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(238, 215, 24, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .platform-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .platform-header i {
+      font-size: 2.5rem;
+      color: #eed718;
+    }
+
+    .platform-header span {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .platform-content {
+      flex-grow: 1;
+      margin-bottom: 25px;
+    }
+
+    .platform-content h5 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .platform-content p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .platform-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .platform-stats span {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .platform-stats i {
+      color: #eed718;
+      font-size: 1rem;
+    }
+
+    .platform-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #eed718 0%, #d4c016 100%);
+      color: #1a1c2e;
+      text-decoration: none;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-align: center;
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .platform-link:hover {
+      background: linear-gradient(135deg, #d4c016 0%, #c2ad14 100%);
+      color: #1a1c2e;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(238, 215, 24, 0.4);
+    }
+
+    .platform-link i {
+      font-size: 1.1rem;
+    }
+
+    .btn-cta-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #eed718 0%, #d4c016 100%);
+      color: #1a1c2e !important;
+      text-decoration: none !important;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 25px rgba(238, 215, 24, 0.3);
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .btn-cta-main:hover {
+      background: linear-gradient(135deg, #d4c016 0%, #c2ad14 100%);
+      color: #1a1c2e !important;
+      text-decoration: none !important;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(238, 215, 24, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .social-platform-card {
+        margin-bottom: 20px;
+        padding: 25px 20px;
+      }
+      
+      .platform-header {
+        text-align: center;
+        justify-content: center;
+      }
+      
+      .platform-header i {
+        font-size: 2rem;
+      }
+      
+      .platform-header span {
+        font-size: 1.2rem;
+      }
+      
+      .social-media-showcase h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+      }
+
+      .platform-content h5 {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      .platform-content p {
+        text-align: center;
+        font-size: 0.95rem;
+      }
+
+      .platform-stats {
+        align-items: center;
+      }
+    }
   </style>
 
 
@@ -227,15 +401,15 @@
               </div>
               <div class="hero-stats">
                 <div class="stat-item">
-                  <span class="stat-number">100+</span>
+                  <span class="stat-number text-center">100+</span>
                   <span class="stat-label">Zufriedene Kunden</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">100%</span>
+                  <span class="stat-number text-center">100%</span>
                   <span class="stat-label">Maßanfertigung</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">0</span>
+                  <span class="stat-number text-center">0</span>
                   <span class="stat-label">Bohrlöcher nötig</span>
                 </div>
               </div>
@@ -390,8 +564,8 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
                   <i class="bi bi-2-circle-fill"></i>
                 </div>
                 <div class="tab-content">
-                  <h5>17mm Klicksystem</h5>
-                  <span>Anthrazit</span>
+                  <h5>17mm</h5>
+                  <span>Anthrazit & Weiß</span>
                 </div>
               </a>
             </li><!-- End tab nav item -->
@@ -399,11 +573,11 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
                 <div class="tab-icon">
-                  <i class="bi bi-lightning-charge"></i>
+                  <i class="bi bi-3-circle-fill"></i>
                 </div>
                 <div class="tab-content">
-                  <h5>Performance</h5>
-                  <span>Lightning fast speed</span>
+                  <h5>17mm Design</h5>
+                  <span>Anthrazit & Weiß</span>
                 </div>
               </a>
             </li><!-- End tab nav item -->
@@ -411,11 +585,23 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4">
                 <div class="tab-icon">
-                  <i class="bi bi-heart-pulse"></i>
+                  <i class="bi bi-4-circle-fill"></i>
                 </div>
                 <div class="tab-content">
-                  <h5>Support</h5>
-                  <span>24/7 assistance</span>
+                  <h5>27mm Braun</h5>
+                  <span>Rolladen-Montage</span>
+                </div>
+              </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-5">
+                <div class="tab-icon">
+                  <i class="bi bi-5-circle-fill"></i>
+                </div>
+                <div class="tab-content">
+                  <h5>Netze</h5>
+                  <span>Materialien</span>
                 </div>
               </a>
             </li><!-- End tab nav item -->
@@ -548,7 +734,7 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
                     <div class="feature-grid">
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>17mm Anthrazitprofil für elegantes Design</span>
+                        <span>17mm elegantes Design</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
@@ -664,47 +850,42 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
 
                 <div class="col-lg-5">
                   <div class="content-wrapper">
-                    <div class="icon-badge">
-                      <i class="bi bi-lightning-charge"></i>
+                    <div>
                     </div>
-                    <h3>Lightning Performance</h3>
-                    <p>Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel.</p>
+                    <h3>17mm Klicksystem Design</h3>
+                    <p>Das elegante 17mm Klicksystem Design in Anthrazit vereint moderne Optik mit innovativer Montagetechnik. Montageort am Fensterrahmen zwischen Rolladen und Fenster - perfekt für eine saubere Installation ohne Beschädigungen.</p>
 
                     <div class="feature-grid">
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Duis aute irure dolor in reprehenderit in voluptate</span>
+                        <span>17mm Anthrazitprofil für elegantes Design</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Excepteur sint occaecat cupidatat non proident</span>
+                        <span>Montageort am Fensterrahmen zwischen Rolladen und Fenster</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Sunt in culpa qui officia deserunt mollit</span>
+                        <span>Montage mit innovativem Klicksystem</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Sed ut perspiciatis unde omnis iste natus</span>
+                        <span>Ohne Bohren, ohne Kleben - rückstandslose Montage</span>
                       </div>
                     </div>
 
                     <div class="stats-row">
                       <div class="stat-item">
-                        <div class="stat-number">0.5s</div>
-                        <div class="stat-label">Load Time</div>
+                        <div class="stat-number">17mm</div>
+                        <div class="stat-label">Profilstärke</div>
                       </div>
                       <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Optimized</div>
-                      </div>
-                      <div class="stat-item">
-                        <div class="stat-number">CDN</div>
-                        <div class="stat-label">Global</div>
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Bohrlöcher</div>
                       </div>
                     </div>
 
-                    <a href="#" class="btn-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                    <a href="#contact" class="btn-primary">Jetzt beraten lassen <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
 
@@ -715,36 +896,96 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
                           <div class="main-image">
-                            <img src="assets/img/features/features-6.webp" alt="Performance Insektenschutz 1" class="img-fluid">
+                            <img src="assets/img/produkte/4_Klicksystem_Design_Anthrazit/WhatsApp Bild 2025-08-17 um 21.36.38_4474e596.jpg.png" alt="17mm Klicksystem Design Anthrazit - Bild 1" class="img-fluid">
                             <div class="floating-card">
-                              <i class="bi bi-speedometer2"></i>
+                              <i class="bi bi-cursor-fill"></i>
                               <div class="card-content">
-                                <span>Geschwindigkeit</span>
-                                <strong>Schnelle Montage</strong>
+                                <span>Klick-Design</span>
+                                <strong>17mm Anthrazit</strong>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="swiper-slide">
                           <div class="main-image">
-                            <img src="assets/img/features/features-3.webp" alt="Performance Insektenschutz 2" class="img-fluid">
+                            <img src="assets/img/produkte/4_Klicksystem_Design_Anthrazit/WhatsApp Bild 2025-08-17 um 21.36.38_4b6234fd.jpg.png" alt="17mm Klicksystem Design Anthrazit - Bild 2" class="img-fluid">
                             <div class="floating-card">
-                              <i class="bi bi-lightning"></i>
+                              <i class="bi bi-window"></i>
                               <div class="card-content">
-                                <span>Effizienz</span>
-                                <strong>Optimaler Schutz</strong>
+                                <span>Montageort</span>
+                                <strong>Fensterrahmen</strong>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="swiper-slide">
                           <div class="main-image">
-                            <img src="assets/img/features/features-1.webp" alt="Performance Insektenschutz 3" class="img-fluid">
+                            <img src="assets/img/produkte/4_Klicksystem_Design_Anthrazit/WhatsApp Bild 2025-08-17 um 21.36.39_b3474409.jpg.png" alt="17mm Klicksystem Design Anthrazit - Bild 3" class="img-fluid">
                             <div class="floating-card">
-                              <i class="bi bi-check-circle"></i>
+                              <i class="bi bi-layers"></i>
                               <div class="card-content">
-                                <span>Zuverlässigkeit</span>
-                                <strong>100% Funktional</strong>
+                                <span>Zwischen Rolladen</span>
+                                <strong>& Fenster</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/4_Klicksystem_Design_Anthrazit/WhatsApp Bild 2025-08-17 um 21.36.39_e03e140a.jpg.png" alt="17mm Klicksystem Design Anthrazit - Bild 4" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-hand-index"></i>
+                              <div class="card-content">
+                                <span>Einfaches</span>
+                                <strong>Klicksystem</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/4_Klicksystem_Design_Anthrazit/WhatsApp Bild 2025-08-17 um 21.42.24_ad50afd8.jpg.png" alt="17mm Klicksystem Design Anthrazit - Bild 5" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-check-circle-fill"></i>
+                              <div class="card-content">
+                                <span>Ohne Bohren</span>
+                                <strong>Ohne Kleben</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/4_Klicksystem_Design_Anthrazit/WhatsApp Bild 2025-08-17 um 21.42.24_bbe53346.jpg.png" alt="17mm Klicksystem Design Anthrazit - Bild 6" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-shield-check"></i>
+                              <div class="card-content">
+                                <span>Design-Profil</span>
+                                <strong>Hochwertig</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/4_Klicksystem_Design_Anthrazit/WhatsApp Bild 2025-08-17 um 21.42.25_30965eb9.jpg.png" alt="17mm Klicksystem Design Anthrazit - Bild 7" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-tools"></i>
+                              <div class="card-content">
+                                <span>Professionelle</span>
+                                <strong>Montage</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/4_Klicksystem_Design_Anthrazit/WhatsApp Bild 2025-08-17 um 21.42.25_884a319a.jpg.png" alt="17mm Klicksystem Design Anthrazit - Bild 8" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-award-fill"></i>
+                              <div class="card-content">
+                                <span>Premium</span>
+                                <strong>Qualität</strong>
                               </div>
                             </div>
                           </div>
@@ -767,47 +1008,42 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
 
                 <div class="col-lg-5">
                   <div class="content-wrapper">
-                    <div class="icon-badge">
-                      <i class="bi bi-heart-pulse"></i>
+                    <div>
                     </div>
-                    <h3>Premium Support</h3>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <h3>27mm Braunprofil</h3>
+                    <p>Das robuste 27mm Braunprofil bietet maximale Stabilität und ein warmes, natürliches Design. Montageort nach den Rolladen für optimale Sicherheit und dauerhaften Halt. Professionelle Montage mit Schrauben gewährleistet höchste Langlebigkeit.</p>
 
                     <div class="feature-grid">
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Neque porro quisquam est qui dolorem ipsum</span>
+                        <span>Robustes 27mm Braunprofil für maximale Stabilität</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Quia dolor sit amet consectetur adipisci velit</span>
+                        <span>Montageort nach den Rolladen für sicheren Halt</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Sed quia non numquam eius modi tempora</span>
+                        <span>Professionelle Montage mit hochwertigen Schrauben</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Incidunt ut labore et dolore magnam aliquam</span>
+                        <span>Warmes Braundesign für natürliche Optik</span>
                       </div>
                     </div>
 
                     <div class="stats-row">
                       <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Available</div>
+                        <div class="stat-number">27mm</div>
+                        <div class="stat-label">Profilstärke</div>
                       </div>
                       <div class="stat-item">
-                        <div class="stat-number">2min</div>
-                        <div class="stat-label">Response</div>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Schraubmontage</div>
                       </div>
-                      <div class="stat-item">
-                        <div class="stat-number">Expert</div>
-                        <div class="stat-label">Team</div>
-                      </div>
-                    </div>
+                  </div>
 
-                    <a href="#" class="btn-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                    <a href="#contact" class="btn-primary">Jetzt beraten lassen <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
 
@@ -818,36 +1054,127 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
                           <div class="main-image">
-                            <img src="assets/img/features/features-1.webp" alt="Support Insektenschutz 1" class="img-fluid">
+                            <img src="assets/img/produkte/braun/1.png" alt="27mm Braunprofil - Bild 1" class="img-fluid">
                             <div class="floating-card">
-                              <i class="bi bi-headset"></i>
+                              <i class="bi bi-palette"></i>
                               <div class="card-content">
-                                <span>Support</span>
-                                <strong>Immer für Sie da</strong>
+                                <span>27mm</span>
+                                <strong>Braunprofil</strong>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="swiper-slide">
                           <div class="main-image">
-                            <img src="assets/img/features/features-2.webp" alt="Support Insektenschutz 2" class="img-fluid">
+                            <img src="assets/img/produkte/braun/2.png" alt="27mm Braunprofil - Bild 2" class="img-fluid">
                             <div class="floating-card">
-                              <i class="bi bi-telephone"></i>
+                              <i class="bi bi-arrow-down-square"></i>
                               <div class="card-content">
-                                <span>Beratung</span>
-                                <strong>Kostenlos & Kompetent</strong>
+                                <span>Nach</span>
+                                <strong>Rolladen</strong>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="swiper-slide">
                           <div class="main-image">
-                            <img src="assets/img/features/features-4.webp" alt="Support Insektenschutz 3" class="img-fluid">
+                            <img src="assets/img/produkte/braun/3.png" alt="27mm Braunprofil - Bild 3" class="img-fluid">
                             <div class="floating-card">
-                              <i class="bi bi-tools"></i>
+                              <i class="bi bi-screwdriver"></i>
                               <div class="card-content">
-                                <span>Service</span>
-                                <strong>Wartung & Reparatur</strong>
+                                <span>Schrauben</span>
+                                <strong>Montage</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                      <!-- Add Navigation -->
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End tab content item -->
+
+            <div class="tab-pane fade" id="features-tab-5">
+              <div class="row align-items-center">
+
+                <div class="col-lg-5">
+                  <div class="content-wrapper">
+                    <div>
+                    </div>
+                    <h3>Netze</h3>
+                    <p>Hochwertige Insektenschutznetze in verschiedenen Materialausführungen für optimalen Schutz und Langlebigkeit. Von Standard-Polyesternetzen bis hin zu speziellen Katzen- und Pollennetzen - für jeden Bedarf die passende Lösung.</p>
+
+                    <div class="feature-grid">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Verschiedene Netzmaterialien verfügbar</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Standard-Polyesternetz für alltäglichen Schutz</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Spezielles Katzen-Pollennetz für Allergiker</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>UV-beständig und witterungsresistent</span>
+                      </div>
+                    </div>
+
+                    <div class="stats-row">
+                      <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Netz-Typen</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number dark-font">100%</div>
+                        <div class="stat-label dark-font">UV-Schutz</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number">Alle</div>
+                        <div class="stat-label">Größen</div>
+                      </div>
+                     
+                    </div>
+
+                    <a href="#contact" class="btn-primary">Jetzt beraten lassen <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="visual-content">
+                    <!-- Swiper Carousel -->
+                    <div class="swiper products-carousel">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/netze/Standart_Polyesternetz.png" alt="Standard Polyesternetz" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-grid-3x3-gap"></i>
+                              <div class="card-content">
+                                <span>Standard</span>
+                                <strong>Polyesternetz</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/netze/Katzen_Pollennetz.png" alt="Katzen Pollennetz" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-shield-fill-plus"></i>
+                              <div class="card-content">
+                                <span>Katzen</span>
+                                <strong>Pollennetz</strong>
                               </div>
                             </div>
                           </div>
@@ -881,40 +1208,79 @@ Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row align-items-lg-center">
-          <div class="col-lg-5 order-lg-2" data-aos="fade-left" data-aos-delay="200">
-            <div class="image-wrapper position-relative">
-              <div class="floating-card">
-                <i class="bi bi-shield-lock"></i>
-                <h4>Advanced Security Solutions</h4>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="200">
+            <div class="social-media-showcase">
+              <h3 class="text-white mb-4">Folgen Sie uns auf Social Media</h3>
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <div class="social-platform-card">
+                    <div class="platform-header">
+                      <i class="bi bi-tiktok"></i>
+                      <span>TikTok</span>
+                    </div>
+                    <div class="platform-content">
+                      <h5>Montage-Videos</h5>
+                      <p>Sehen Sie unsere Profis bei der Arbeit! Vom ersten Aufmaß bis zur fertigen Installation.</p>
+                      <div class="platform-stats">
+                        <span><i class="bi bi-eye"></i> Echte Projekte</span>
+                        <span><i class="bi bi-tools"></i> Live Montage</span>
+                      </div>
+                    </div>
+                    <a href="https://www.tiktok.com/@guenes.insektenschutz?lang=de-DE" target="_blank" class="platform-link">
+                      <i class="bi bi-arrow-right"></i>
+                      TikTok besuchen
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="social-platform-card">
+                    <div class="platform-header">
+                      <i class="bi bi-instagram"></i>
+                      <span>Instagram</span>
+                    </div>
+                    <div class="platform-content">
+                      <h5>Behind the Scenes</h5>
+                      <p>Entdecken Sie unsere Arbeit, zufriedene Kunden und innovative Insektenschutz-Lösungen.</p>
+                      <div class="platform-stats">
+                        <span><i class="bi bi-camera"></i> Kundenprojekte</span>
+                        <span><i class="bi bi-heart"></i> Inspiration</span>
+                      </div>
+                    </div>
+                    <a href="https://www.instagram.com/guenes.insektenschutz?igsh=MTlya21jNXJmOTgycQ==" target="_blank" class="platform-link">
+                      <i class="bi bi-arrow-right"></i>
+                      Instagram besuchen
+                    </a>
+                  </div>
+                </div>
               </div>
-              <img src="assets/img/misc/misc-6.webp" alt="Security Solutions" class="img-fluid main-image">
             </div>
           </div>
 
-          <div class="col-lg-6 offset-lg-1 order-lg-1" data-aos="fade-right" data-aos-delay="100">
+          <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="100">
             <div class="content-area">
-              <h2>Transform Your Business with Cutting-Edge Technology</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <h2>Überzeugen Sie sich selbst von unserer Qualität</h2>
+              <p>Folgen Sie uns auf unseren Social Media Kanälen und erleben Sie, wie wir Tag für Tag perfekte Insektenschutz-Lösungen für unsere Kunden schaffen. Authentische Einblicke in unsere Arbeit und zufriedene Kunden sprechen für sich.</p>
 
               <ul class="feature-list">
                 <li>
                   <i class="bi bi-check"></i>
-                  <span>Streamline operations and enhance productivity</span>
+                  <span>Echte Montagevideos und Installationsprozesse</span>
                 </li>
                 <li>
                   <i class="bi bi-check"></i>
-                  <span>Achieve remarkable cost savings and efficiency gains</span>
+                  <span>Kundenprojekte und Vorher-Nachher Aufnahmen</span>
                 </li>
                 <li>
                   <i class="bi bi-check"></i>
-                  <span>Scale your business resources intelligently</span>
+                  <span>Tipps und Tricks rund um Insektenschutz</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Neue Produkte und innovative Lösungen</span>
                 </li>
               </ul>
 
-              <div class="cta-wrapper">
-                <a href="#" class="btn btn-cta">Start Your Journey</a>
-              </div>
+                 
             </div>
           </div>
 
