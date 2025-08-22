@@ -29,6 +29,159 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Custom Carousel Styles -->
+  <style>
+   
+
+    /* Contact CTA Button */
+    .btn-cta-phone {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #eed718 0%, #d4c016 100%);
+      color: #1a1c2e;
+      text-decoration: none;
+      padding: 20px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.25rem;
+      box-shadow: 0 8px 25px rgba(238, 215, 24, 0.3);
+      transition: all 0.3s ease;
+      border: none;
+      min-width: 280px;
+    }
+
+    .btn-cta-phone:hover {
+      background: linear-gradient(135deg, #d4c016 0%, #c2ad14 100%);
+      color: #1a1c2e;
+      text-decoration: none;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(238, 215, 24, 0.4);
+    }
+
+    .btn-cta-phone small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-top: 5px;
+      opacity: 0.8;
+    }
+
+    .btn-cta-phone i {
+      font-size: 1.5rem;
+      margin-right: 15px;
+    }
+
+    .btn-cta-phone .phone-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btn-cta-phone .phone-number {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .btn-cta-phone .phone-subtitle {
+      font-size: 0.9rem;
+      font-weight: 400;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .btn-cta-phone {
+        min-width: 250px;
+        font-size: 1.1rem;
+        padding: 18px 35px;
+      }
+    }
+
+    /* Footer Styling */
+    .footer-legal-links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer-legal-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-legal-links a:hover {
+      color: #eed718;
+      text-decoration: underline;
+    }
+
+    .footer-legal-links .separator {
+      color: rgba(255, 255, 255, 0.5);
+      margin: 0 15px;
+    }
+
+    .opening-hours .hours-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .opening-hours .hour-item span {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 768px) {
+      .footer-legal-links .separator {
+        margin: 0 10px;
+      }
+      
+      .footer-legal-links a {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Hero CTA Styling */
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #eed718 0%, #d4c016 100%);
+      color: #1a1c2e !important;
+      text-decoration: none !important;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 25px rgba(238, 215, 24, 0.3);
+      transition: all 0.3s ease;
+      border: none;
+      min-width: 250px;
+    }
+
+    .hero-cta:hover {
+      background: linear-gradient(135deg, #d4c016 0%, #c2ad14 100%);
+      color: #1a1c2e !important;
+      text-decoration: none !important;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(238, 215, 24, 0.4);
+    }
+
+    .hero-cta i {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-cta {
+        min-width: 220px;
+        font-size: 1rem;
+        padding: 16px 35px;
+      }
+    }
+  </style>
+
 
 </head>
 
@@ -44,16 +197,12 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#FAQ">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Über uns</a></li>
+          <li><a href="#features">Produkte</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
     </div>
   </header>
 
@@ -71,15 +220,14 @@
               <h1 class="hero-title">Maßgeschneiderter Insektenschutz ohne Bohren</h1>
               <p class="hero-description">Bei Günes Insektenschutz erhalten Sie perfekt angepasste Lösungen für Ihre Fenster und Türen. Professionell, sauber und ganz ohne Bohren in den Rahmen.</p>
               <div class="hero-actions">
-                <a href="#about" class="btn-primary">Jetzt beraten lassen</a>
-                <a href="#contact" class="btn-secondary">
-                  <i class="bi bi-telephone"></i>
+                <a href="tel:015773839977" class="btn-primary hero-cta">
+                  <i class="bi bi-telephone-fill me-2"></i>
                   <span>Kostenlose Beratung</span>
                 </a>
               </div>
               <div class="hero-stats">
                 <div class="stat-item">
-                  <span class="stat-number">500+</span>
+                  <span class="stat-number">100+</span>
                   <span class="stat-label">Zufriedene Kunden</span>
                 </div>
                 <div class="stat-item">
@@ -132,43 +280,29 @@
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="content-wrapper">
               <div class="section-header">
-                <span class="section-badge">ABOUT OUR COMPANY</span>
-                <h2>Tempor incididunt ut labore et dolore magna</h2>
+                <span class="section-badge">Über uns</span>
+                <h2>Qualität, Zuverlässigkeit und maßgeschneiderte Lösungen.</h2>
               </div>
 
-              <p class="lead-text">Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
 
-              <p class="description-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+              <p class="description-text">Mit Leidenschaft, Präzision und innovativen Ideen sorgen wir dafür, dass unsere Kunden ihre Räume ungestört genießen können – frei von Insekten, aber mit frischer Luft und mehr Lebensqualität.
+Die Wurzeln von Insektenschutz Günes liegen in der Überzeugung, dass Insektenschutz mehr bedeutet als nur Schutz vor lästigen Plagegeistern. Es geht um Komfort, Wohlbefinden und die Möglichkeit, das Zuhause in vollen Zügen zu genießen.
+Gegründet von der Familie Günes, entwickelte sich das Unternehmen Schritt für Schritt vom kleinen Handwerksbetrieb zu einem gefragten Fachbetrieb für individuellen Insektenschutz. Von Anfang an standen dabei zwei Dinge im Mittelpunkt: höchste Qualität und echte Kundennähe.
+Durch stetige Weiterentwicklung, modernste Technik und den Einsatz langlebiger Materialien bietet Insektenschutz Günes heute maßgeschneiderte Lösungen – von passgenauen Schiebeelementen mit Fliegengitter für Fenster und Türen , sowie Verdunkelungen .
+Mit einem erfahrenen Team, handwerklicher Präzision und einem klaren Blick für Design verbindet das Unternehmen Tradition mit Innovation und bleibt doch seinen Werten treu: Verlässlichkeit, Vertrauen und die Leidenschaft für perfekten Insektenschutz.</p>
 
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number">250+</div>
-                  <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">98%</div>
-                  <div class="stat-label">Client Satisfaction</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">24/7</div>
-                  <div class="stat-label">Support Available</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">12+</div>
-                  <div class="stat-label">Years Experience</div>
-                </div>
-              </div>
+           
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="visual-section">
               <div class="main-image-container">
-                <img src="assets/img/about/about-8.webp" alt="Professional team collaboration" class="img-fluid main-visual">
+                <img src="assets/img/about/about-11.jpg" alt="Professional team collaboration" class="img-fluid main-visual">
                 <div class="overlay-card">
                   <div class="card-content">
-                    <h4>Quality First</h4>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+                    <h4>Maßgeschneidert</h4>
+                    <p class="text-white">Jeder Insektenschutz wird individuell gefertigt und perfekt an Ihre Fenster und Türen angepasst - für optimalen Schutz ohne Kompromisse.</p>
                     <div class="card-icon">
                       <i class="bi bi-award-fill"></i>
                     </div>
@@ -176,21 +310,13 @@
                 </div>
               </div>
 
-              <div class="secondary-images">
-                <div class="row g-3">
-                  <div class="col-6">
-                    <img src="assets/img/about/about-11.webp" alt="Team meeting" class="img-fluid secondary-img">
-                  </div>
-                  <div class="col-6">
-                    <img src="assets/img/about/about-5.webp" alt="Office workspace" class="img-fluid secondary-img">
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
         </div>
 
+
+        <!-- Steps -->
         <div class="row mt-5">
           <div class="col-12" data-aos="fade-up" data-aos-delay="400">
             <div class="features-section">
@@ -198,28 +324,28 @@
                 <div class="col-md-4">
                   <div class="feature-box">
                     <div class="feature-icon">
-                      <i class="bi bi-shield-check"></i>
+                      <i class="bi bi-chat-dots"></i>
                     </div>
-                    <h5>Trusted Security</h5>
-                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.</p>
+                    <h5>Kostenlose Beratung</h5>
+                    <p>Wir beraten Sie umfassend und kostenlos vor Ort. Gemeinsam finden wir die perfekte Lösung für Ihre Fenster und Türen - ganz unverbindlich und auf Ihre Bedürfnisse zugeschnitten.</p>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="feature-box">
                     <div class="feature-icon">
-                      <i class="bi bi-lightning-charge"></i>
+                      <i class="bi bi-gear"></i>
                     </div>
-                    <h5>Fast Performance</h5>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur.</p>
+                    <h5>Produktion</h5>
+                    <p>In unserer Werkstatt fertigen wir Ihren Insektenschutz millimetergenau nach Maß. Hochwertige Materialien und modernste Technik garantieren perfekte Passform und Langlebigkeit.</p>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="feature-box">
                     <div class="feature-icon">
-                      <i class="bi bi-headset"></i>
+                      <i class="bi bi-tools"></i>
                     </div>
-                    <h5>Expert Support</h5>
-                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.</p>
+                    <h5>Montage</h5>
+                    <p>Unsere erfahrenen Monteure installieren Ihren Insektenschutz professionell und sauber - fest in den Rahmen montiert oder ganz ohne Bohren. Schnell, zuverlässig und mit perfektem Ergebnis.</p>
                   </div>
                 </div>
               </div>
@@ -228,17 +354,17 @@
         </div>
 
       </div>
-
-    </section><!-- /About Section -->
+<!-- Steps -->
+</section><!-- /About Section -->
 
     <!-- Features Section -->
     <section id="features" class="features section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Features</span>
-        <h2>Features</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">Produkte</span>
+        <h2>Produkte</h2>
+        <p>Hochwertige Insektenschutz für jeden Bedarf - von klassischen Fliegengittern bis zu innovativen Schiebeelementen und Verdunkelungen</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -249,11 +375,11 @@
             <li class="nav-item">
               <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
                 <div class="tab-icon">
-                  <i class="bi bi-rocket-takeoff"></i>
+                  <i class="bi bi-1-circle-fill"></i>
                 </div>
                 <div class="tab-content">
-                  <h5>Innovation</h5>
-                  <span>Cutting-edge solutions</span>
+                  <h5>20mm Profile</h5>
+                  <span>Anthrazit</span>
                 </div>
               </a>
             </li><!-- End tab nav item -->
@@ -261,11 +387,11 @@
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
                 <div class="tab-icon">
-                  <i class="bi bi-shield-shaded"></i>
+                  <i class="bi bi-2-circle-fill"></i>
                 </div>
                 <div class="tab-content">
-                  <h5>Security</h5>
-                  <span>Advanced protection</span>
+                  <h5>17mm Klicksystem</h5>
+                  <span>Anthrazit</span>
                 </div>
               </a>
             </li><!-- End tab nav item -->
@@ -303,61 +429,105 @@
 
                 <div class="col-lg-5">
                   <div class="content-wrapper">
-                    <div class="icon-badge">
-                      <i class="bi bi-rocket-takeoff"></i>
+                    <div>
                     </div>
-                    <h3>Innovation Excellence</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
+                    <h3>20mm Profil Anthrazit</h3>
+                    <p>Das 20mm Profil in Anthrazit vereint elegantes Design mit höchster Funktionalität. Die robuste Konstruktion bietet optimalen Insektenschutz und fügt sich perfekt in moderne Fenster- und Türrahmen ein.</p>
 
                     <div class="feature-grid">
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Excepteur sint occaecat cupidatat non proident</span>
+                        <span>Robustes 20mm Profil für maximale Stabilität</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Sunt in culpa qui officia deserunt mollit anim</span>
+                        <span>Elegante anthrazitfarbene Oberfläche - zeitlos und pflegeleicht</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>At vero eos et accusamus et iusto odio</span>
+                        <span>Millimetergenaue Maßanfertigung für perfekte Passform</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Et harum quidem rerum facilis est et expedita</span>
+                        <span>Hochwertige Gewebe für optimalen Insektenschutz</span>
                       </div>
                     </div>
 
                     <div class="stats-row">
                       <div class="stat-item">
-                        <div class="stat-number">99%</div>
-                        <div class="stat-label">Uptime</div>
+                        <div class="stat-number">20mm</div>
+                        <div class="stat-label">Profilstärke</div>
                       </div>
                       <div class="stat-item">
-                        <div class="stat-number">50K+</div>
-                        <div class="stat-label">Users</div>
+                        <div class="stat-number dark-font">100%</div>
+                        <div class="stat-label dark-font">Maßgefertigt</div>
                       </div>
-                      <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Support</div>
-                      </div>
+                     
                     </div>
 
-                    <a href="#" class="btn-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                    <a href="#contact" class="btn-primary">Jetzt beraten lassen <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
 
                 <div class="col-lg-7">
                   <div class="visual-content">
-                    <div class="main-image">
-                      <img src="assets/img/features/features-4.webp" alt="" class="img-fluid">
-                      <div class="floating-card">
-                        <i class="bi bi-graph-up-arrow"></i>
-                        <div class="card-content">
-                          <span>Performance</span>
-                          <strong>+85% Improvement</strong>
+                    <!-- Swiper Carousel -->
+                    <div class="swiper products-carousel">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/1_20mm_Profil_Anthrazit/1.png" alt="20mm Profil Anthrazit - Bild 1" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-rulers"></i>
+                              <div class="card-content">
+                                <span>20mm Profil</span>
+                                <strong>Anthrazit</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/1_20mm_Profil_Anthrazit/2.png" alt="20mm Profil Anthrazit - Bild 2" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-scissors"></i>
+                              <div class="card-content">
+                                <span>Präzision</span>
+                                <strong>Maßgeschneidert</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/1_20mm_Profil_Anthrazit/3.png" alt="20mm Profil Anthrazit - Bild 3" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-shield-check"></i>
+                              <div class="card-content">
+                                <span>Qualität</span>
+                                <strong>Langlebig</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/1_20mm_Profil_Anthrazit/4.png" alt="20mm Profil Anthrazit - Bild 4" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-gear-wide-connected"></i>
+                              <div class="card-content">
+                                <span>Montage</span>
+                                <strong>Einfach & Sicher</strong>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                      <!-- Add Navigation -->
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
                     </div>
                   </div>
                 </div>
@@ -370,61 +540,118 @@
 
                 <div class="col-lg-5">
                   <div class="content-wrapper">
-                    <div class="icon-badge">
-                      <i class="bi bi-shield-shaded"></i>
+                    <div>
                     </div>
-                    <h3>Advanced Security</h3>
-                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore.</p>
+                    <h3>17mm Klicksystem Anthrazit</h3>
+                    <p>Das innovative 17mm Klicksystem ermöglicht eine einfache Montage ohne Bohren und ohne Kleben. Perfekt für die Installation zwischen Rolladen und Fenster - schnell, sauber und reversibel.</p>
 
                     <div class="feature-grid">
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Temporibus autem quibusdam et aut officiis</span>
+                        <span>17mm Anthrazitprofil für elegantes Design</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Nam libero tempore cum soluta nobis</span>
+                        <span>Montage zwischen Rolladen und Fenster</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Itaque earum rerum hic tenetur a sapiente</span>
+                        <span>Innovatives Klicksystem - ohne Bohren, ohne Kleben</span>
                       </div>
                       <div class="feature-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Quis autem vel eum iure reprehenderit qui</span>
+                        <span>Einfache Installation und rückstandslose Entfernung</span>
                       </div>
                     </div>
 
                     <div class="stats-row">
                       <div class="stat-item">
-                        <div class="stat-number">256-bit</div>
-                        <div class="stat-label">Encryption</div>
+                        <div class="stat-number">17mm</div>
+                        <div class="stat-label">Profilstärke</div>
                       </div>
                       <div class="stat-item">
-                        <div class="stat-number">ISO</div>
-                        <div class="stat-label">Certified</div>
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Bohrlöcher</div>
                       </div>
-                      <div class="stat-item">
-                        <div class="stat-number">GDPR</div>
-                        <div class="stat-label">Compliant</div>
-                      </div>
+                   
                     </div>
 
-                    <a href="#" class="btn-primary">Learn More <i class="bi bi-arrow-right"></i></a>
+                    <a href="#contact" class="btn-primary">Jetzt beraten lassen <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
 
                 <div class="col-lg-7">
                   <div class="visual-content">
-                    <div class="main-image">
-                      <img src="assets/img/features/features-2.webp" alt="" class="img-fluid">
-                      <div class="floating-card">
-                        <i class="bi bi-shield-check"></i>
-                        <div class="card-content">
-                          <span>Security</span>
-                          <strong>Military Grade</strong>
+                    <!-- Swiper Carousel -->
+                    <div class="swiper products-carousel">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/2_Klicksystem_Anthrazit/1.png" alt="17mm Klicksystem Anthrazit" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-cursor-fill"></i>
+                              <div class="card-content">
+                                <span>Klicksystem</span>
+                                <strong>Einfach & Schnell</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/2_Klicksystem_Anthrazit/2.png" alt="17mm Klicksystem Anthrazit" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-check-circle-fill"></i>
+                              <div class="card-content">
+                                <span>Ohne Bohren</span>
+                                <strong>Rückstandslos</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/2_Klicksystem_Anthrazit/3_b.png" alt="17mm Klicksystem Anthrazit" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-window"></i>
+                              <div class="card-content">
+                                <span>Montageort</span>
+                                <strong>Rolladen & Fenster</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/2_Klicksystem_Anthrazit/4.png" alt="17mm Klicksystem Anthrazit" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-paint-bucket"></i>
+                              <div class="card-content">
+                                <span>17mm Profil</span>
+                                <strong>Weißes Design</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                             <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/produkte/2_Klicksystem_Anthrazit/1_b.png" alt="17mm Klicksystem Anthrazit" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-circle-square"></i>
+                              <div class="card-content">
+                                <span>17mm Profil</span>
+                                <strong>Anthrazit Design</strong>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                      <!-- Add Navigation -->
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
                     </div>
                   </div>
                 </div>
@@ -483,15 +710,51 @@
 
                 <div class="col-lg-7">
                   <div class="visual-content">
-                    <div class="main-image">
-                      <img src="assets/img/features/features-6.webp" alt="" class="img-fluid">
-                      <div class="floating-card">
-                        <i class="bi bi-speedometer2"></i>
-                        <div class="card-content">
-                          <span>Speed</span>
-                          <strong>Ultra Fast</strong>
+                    <!-- Swiper Carousel -->
+                    <div class="swiper products-carousel">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/features/features-6.webp" alt="Performance Insektenschutz 1" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-speedometer2"></i>
+                              <div class="card-content">
+                                <span>Geschwindigkeit</span>
+                                <strong>Schnelle Montage</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/features/features-3.webp" alt="Performance Insektenschutz 2" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-lightning"></i>
+                              <div class="card-content">
+                                <span>Effizienz</span>
+                                <strong>Optimaler Schutz</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/features/features-1.webp" alt="Performance Insektenschutz 3" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-check-circle"></i>
+                              <div class="card-content">
+                                <span>Zuverlässigkeit</span>
+                                <strong>100% Funktional</strong>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                      <!-- Add Navigation -->
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
                     </div>
                   </div>
                 </div>
@@ -550,15 +813,51 @@
 
                 <div class="col-lg-7">
                   <div class="visual-content">
-                    <div class="main-image">
-                      <img src="assets/img/features/features-1.webp" alt="" class="img-fluid">
-                      <div class="floating-card">
-                        <i class="bi bi-headset"></i>
-                        <div class="card-content">
-                          <span>Support</span>
-                          <strong>Always Here</strong>
+                    <!-- Swiper Carousel -->
+                    <div class="swiper products-carousel">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/features/features-1.webp" alt="Support Insektenschutz 1" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-headset"></i>
+                              <div class="card-content">
+                                <span>Support</span>
+                                <strong>Immer für Sie da</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/features/features-2.webp" alt="Support Insektenschutz 2" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-telephone"></i>
+                              <div class="card-content">
+                                <span>Beratung</span>
+                                <strong>Kostenlos & Kompetent</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="main-image">
+                            <img src="assets/img/features/features-4.webp" alt="Support Insektenschutz 3" class="img-fluid">
+                            <div class="floating-card">
+                              <i class="bi bi-tools"></i>
+                              <div class="card-content">
+                                <span>Service</span>
+                                <strong>Wartung & Reparatur</strong>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                      <!-- Add Navigation -->
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
                     </div>
                   </div>
                 </div>
@@ -626,169 +925,38 @@
     </section><!-- /Call To Action Section -->
 
    
-    
-
-   
-   
-
-   
-    <!-- Faq Section -->
-
-    <section id="FAQ" class="faq section">
-     <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">FAQ</span>
-        <h2>FAQ</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div><!-- End Faq Column-->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
+  
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Contact</span>
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">Kontakt</span>
+        <h2>Kontakt</h2>
+        <p>Erreichen Sie uns für eine kostenlose Beratung und individuelle Lösungen für Ihren Insektenschutz</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row g-5">
-          <div class="col-lg-6">
-            <div class="content" data-aos="fade-up" data-aos-delay="200">
-              <div class="section-category mb-3">Contact US</div>
-              <h2 class="display-5 mb-4">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
-              <p class="lead mb-4">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="content text-center" data-aos="fade-up" data-aos-delay="200">
+              <p class="lead mb-4 fw-bold">Wir beraten Sie gerne kostenlos und unverbindlich.</p>
 
               <div class="contact-info mt-5">
-                <div class="info-item d-flex mb-3" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-envelope-at me-3"></i>
-                  <span>info@example.com</span>
+                <div class="cta-container d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="300">
+                  <a href="tel:015773839977" class="btn-cta-phone">
+                    <i class="bi bi-telephone-fill"></i>
+                    <div class="phone-content">
+                      <span class="phone-number">01577 3839977</span>
+                    </div>
+                  </a>
                 </div>
-
-                <div class="info-item d-flex mb-3" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bi bi-telephone me-3"></i>
-                  <span>+1 5589 55488 558</span>
-                </div>
-
-                <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
-                  <i class="bi bi-geo-alt me-3"></i>
-                  <span>A108 Adam Street, New York, NY 535022</span>
-                </div>
-
-                <a href="#" class="map-link d-inline-flex align-items-center" data-aos="fade-up" data-aos-delay="600">
-                  Open Map
-                  <i class="bi bi-arrow-right ms-2"></i>
-                </a>
+   
+       
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6">
-            <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
-              <div class="card-body p-4 p-lg-5">
-
-                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-                  <div class="row gy-4">
-
-                    <div class="col-12">
-                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                    </div>
-
-                    <div class="col-12 ">
-                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                    </div>
-
-                    <div class="col-12">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                    </div>
-
-                    <div class="col-12">
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                    </div>
-
-                    <div class="col-12 text-center">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
-                    </div>
-
-                  </div>
-                </form>
-
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -800,49 +968,40 @@
   <footer id="footer" class="footer position-relative dark-background">
 
     <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Landify</span>
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 footer-about text-center">
+          <a href="index.html" class="logo d-flex justify-content-center align-items-center mb-3">
+            <div>
+              <img style="max-width: 240px; max-height: 240px;" src="assets/img/logo/Logo.png" alt="">
+            </div>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="https://www.tiktok.com/@guenes.insektenschutz?_t=ZN-8yeDd5u2vXa&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
+          <p class="mb-4">Professioneller Insektenschutz für Ihre Fenster und Türen. Maßanfertigung ohne Bohren - sauber, schnell und zuverlässig montiert von Ihrem Experten aus Wesseling.</p>
+          
+          <div class="opening-hours mb-4">
+            <h5>Öffnungszeiten:</h5>
+            <div class="hours-list">
+              <div class="hour-item">
+                <span>Montag - Samstag: 09:00 - 18:30 Uhr</span>
+              </div>
+              <div class="hour-item">
+                <span>Sonntag: geschlossen</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links d-flex justify-content-center mb-4">
+            <a href="https://www.tiktok.com/@guenes.insektenschutz?lang=de-DE" target="_blank"><i class="bi bi-tiktok"></i></a>
             <a href="https://www.instagram.com/guenes.insektenschutz?igsh=MTlya21jNXJmOTgycQ==" target="_blank"><i class="bi bi-instagram"></i></a>
           </div>
-        </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
+          <div class="footer-legal-links">
+            <a href="impressum.html">Impressum</a>
+            <span class="separator">|</span>
+            <a href="agb.html">AGB</a>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
-        </div>
-
       </div>
     </div>
 
@@ -867,6 +1026,42 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Products Carousel JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize all product carousels
+      const swipers = document.querySelectorAll('.products-carousel');
+      
+      swipers.forEach(function(swiperElement) {
+        new Swiper(swiperElement, {
+          // Optional parameters
+          loop: true,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          speed: 800,
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          },
+          
+          // If we need pagination
+          pagination: {
+            el: swiperElement.querySelector('.swiper-pagination'),
+            clickable: true,
+          },
+          
+          // Navigation arrows
+          navigation: {
+            nextEl: swiperElement.querySelector('.swiper-button-next'),
+            prevEl: swiperElement.querySelector('.swiper-button-prev'),
+          },
+        });
+      });
+    });
+  </script>
 
 </body>
 

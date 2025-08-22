@@ -36,10 +36,19 @@
   --contrast-color: #141850;
 }
 
+.dark-font {
+  color: #1a1c2e;
+}
+
+.yellow-font {
+  color: #eed718;
+}
+
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -842,7 +851,6 @@ section,
   display: block;
   font-size: 2rem;
   font-weight: 300;
-  color: var(--contrast-color);
   margin-bottom: 4px;
 }
 
@@ -1053,7 +1061,6 @@ section,
 .about .stat-item .stat-number {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--contrast-color);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -1472,7 +1479,6 @@ section,
 .features .content-wrapper .stats-row .stat-item .stat-number {
   font-size: 24px;
   font-weight: 700;
-  color: var(--accent-color);
   margin-bottom: 5px;
 }
 
@@ -1602,6 +1608,72 @@ section,
   }
 }
 
+/*--------------------------------------------------------------
+# Products Caroussel
+--------------------------------------------------------------*/
+
+ /* Custom Swiper Navigation Arrows */
+    .products-carousel .swiper-button-next,
+    .products-carousel .swiper-button-prev {
+      width: 35px !important;
+      height: 35px !important;
+      margin-top: -17.5px !important;
+      background-color: #eed718 !important;
+      border-radius: 50% !important;
+      box-shadow: 0 2px 8px rgba(238, 215, 24, 0.3) !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .products-carousel .swiper-button-next:hover,
+    .products-carousel .swiper-button-prev:hover {
+      background-color: #d4c016 !important;
+      transform: scale(1.1) !important;
+      box-shadow: 0 4px 12px rgba(238, 215, 24, 0.5) !important;
+    }
+
+    .products-carousel .swiper-button-next::after,
+    .products-carousel .swiper-button-prev::after {
+      font-size: 14px !important;
+      font-weight: bold !important;
+      color: #1a1c2e !important;
+    }
+
+    .products-carousel .swiper-button-next {
+      right: 15px !important;
+    }
+
+    .products-carousel .swiper-button-prev {
+      left: 15px !important;
+    }
+
+    /* Custom Pagination Dots */
+    .products-carousel .swiper-pagination-bullet {
+      width: 10px !important;
+      height: 10px !important;
+      background-color: rgba(238, 215, 24, 0.3) !important;
+      opacity: 1 !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .products-carousel .swiper-pagination-bullet-active {
+      background-color: #eed718 !important;
+      transform: scale(1.2) !important;
+    }
+
+    /* Ensure arrows are visible on mobile */
+    @media (max-width: 768px) {
+      .products-carousel .swiper-button-next,
+      .products-carousel .swiper-button-prev {
+        width: 30px !important;
+        height: 30px !important;
+        margin-top: -15px !important;
+      }
+
+      .products-carousel .swiper-button-next::after,
+      .products-carousel .swiper-button-prev::after {
+        font-size: 12px !important;
+      }
+    }
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
