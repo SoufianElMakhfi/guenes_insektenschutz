@@ -1546,9 +1546,14 @@ section,
   transition: transform 0.6s ease;
 }
 
-/* Spezielle Regel für Netze-Bilder - sollen beschnitten bleiben */
+/* Spezielle Regel für Netze-Bilder - quadratisch */
+#features-tab-5 .visual-content .main-image {
+  aspect-ratio: 1 / 1;
+}
+
 #features-tab-5 .visual-content .main-image img {
   object-fit: cover;
+  height: 100%;
 }
 
 .features .visual-content .main-image:hover img {
@@ -2104,4 +2109,37 @@ section,
   .features .tab-pane .col-lg-7 {
     margin-bottom: 30px;
   }
+}
+
+
+/*Google Bewertungen*/
+
+/* Verstecke nur Elfsight Branding Link - Spezifische Lösung */
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb a[href*="elfsight.com"],
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb a[href*="widget"],
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb [class*="eapps-link"],
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb [class*="eapps-logo"],
+[data-elfsight-app-lazy] a[href*="elfsight.com"],
+[data-elfsight-app-lazy] a[target="_blank"][href*="widget"],
+/* Verstecke "Free Google Reviews widget" Text */
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb a:contains("Free Google Reviews widget"),
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb [href*="reviews"]:not([href*="google.com"]),
+[data-elfsight-app-lazy] a[href*="reviews"]:not([href*="google.com"]),
+/* Verstecke alle Links mit "Free" oder "widget" im Text */
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb a[href*="free"],
+[data-elfsight-app-lazy] a[href*="free"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Stelle sicher, dass Profilbilder sichtbar bleiben */
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb img,
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb [class*="avatar"],
+.elfsight-app-e53d48a0-0421-408b-b1ab-9892e6f65fbb [class*="profile"],
+[data-elfsight-app-lazy] img,
+[data-elfsight-app-lazy] [class*="avatar"],
+[data-elfsight-app-lazy] [class*="profile"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
