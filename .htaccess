@@ -1,0 +1,25 @@
+# Enable Rewrite Engine
+RewriteEngine On
+RewriteBase /
+
+# Force HTTPS
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Basic directory settings
+Options +FollowSymLinks -Indexes
+
+# Ensure HSTS is set
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript
+</IfModule>
+
+# Basic security headers
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
